@@ -1,0 +1,14 @@
+{
+  "timestamp": "2026-05-25T01:29:48+00:00",
+  "mode": "loopwyrm_audio_spine_mapping",
+  "spine_repo": "https://github.com/TheMindExpansionNetwork/loopwyrm_endless_jam_spine",
+  "spine_local_path": "/opt/data/workspace/projects/loopwyrm_endless_jam_spine",
+  "spine_commit": "cfb52c444ed30398dbe3821a89a71222caebac8e",
+  "verified_demo_command": "uv run --with numpy python scripts/run_endless_spine.py --root loop_bank --duration-min 1 --out loop_bank/mixed/exports/loopwyrm_endless_jam_spine_verify_1min.mp3 --demo-seed-if-empty",
+  "katalog_proof_mp3": "loop_bank/mixed/exports/loopwyrm_endless_jam_spine_verify_1min.mp3",
+  "proof_sha256": "11fc0917da43c79b0d6759f14b45c16c539a841a393800ab385cf8169e943fb5",
+  "proof_duration_sec": 60.024,
+  "fluxrt_config": "configs/loopwyrm_snake_modal_config.json",
+  "fluxrt_doc": "docs/LOOPWYRM_REALTIME_SNAKE_BRIDGE.md",
+  "claim_boundary": "This 1-minute proof uses procedural demo seed clips from the spine; it verifies the queue/mixer/encoding contract, not real SA3 generation, LMDM integration, Discord voice, or live FluxRT inference. FluxRT remains CPU/procedural until GPU inference is separately verified."
+}

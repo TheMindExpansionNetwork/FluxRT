@@ -56,6 +56,47 @@ modal run modal/fluxrt_gpu_future.py::fluxrt_video_smoke \
   --prompt "turn the live stream into a real emerald python made of living code, scales reflecting terminal text, assistive HUD, cyberpunk stage lighting"
 ```
 
+
+## Audio spine bridge
+
+Canonical audio spine repo:
+
+```text
+https://github.com/TheMindExpansionNetwork/loopwyrm_endless_jam_spine
+```
+
+The spine is the source-of-truth contract for continuous Loopwyrm/Sonic-Forage audio:
+
+```text
+SA3 / ACE-Step / Dasheng / future LMDM workers
+-> loop_bank/<lane>/incoming/*.wav|*.mp3
+-> normalizer writes loop_bank/<lane>/ready/*__normalized.*
+-> mixer/crossfader writes loop_bank/mixed/exports/*.mp3
+-> receipt JSON records clips_used, hashes, durations, and claim boundaries
+```
+
+Verified in this integration pass using uv-managed NumPy (the host `python3` lacked NumPy):
+
+```bash
+cd /opt/data/workspace/projects/loopwyrm_endless_jam_spine
+uv run --with numpy python scripts/run_endless_spine.py \
+  --root loop_bank \
+  --duration-min 1 \
+  --out loop_bank/mixed/exports/loopwyrm_endless_jam_spine_verify_1min.mp3 \
+  --demo-seed-if-empty
+```
+
+Receipt/proof copied into the katalog repo:
+
+```text
+loop_bank/mixed/exports/loopwyrm_endless_jam_spine_verify_1min.mp3
+receipts/LATEST_LOOPWYRM_SPINE_FLUXRT_MAPPING.json
+```
+
+Proof SHA-256: `11fc0917da43c79b0d6759f14b45c16c539a841a393800ab385cf8169e943fb5`
+
+FluxRT should consume this as a timeline/control-sync signal, not as proof of live video inference. The current FluxRT lane remains: procedural control packet + Modal CPU scaffold only; GPU FLUX/RIFE inference is still fail-closed until model caches and a GPU receipt exist.
+
 ## Intended live architecture
 
 ```text

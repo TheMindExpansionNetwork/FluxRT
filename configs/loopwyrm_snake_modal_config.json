@@ -36,6 +36,20 @@
       "starts_live_show_control_by_default": false,
       "downloads_weights_by_default": false,
       "requires_human_approval_for_public_stream": true
+    },
+    "audio_spine": {
+      "repo": "https://github.com/TheMindExpansionNetwork/loopwyrm_endless_jam_spine",
+      "katalog_repo": "https://github.com/TheMindExpansionNetwork/loopwyrm-visual-music-katalog",
+      "incoming_audio_lanes": [
+        "sa3",
+        "acestep",
+        "dasheng",
+        "lmdm"
+      ],
+      "mix_exports": "loop_bank/mixed/exports/*.mp3",
+      "receipt_key": "clips_used",
+      "verified_demo_sha256": "11fc0917da43c79b0d6759f14b45c16c539a841a393800ab385cf8169e943fb5",
+      "claim_boundary": "Audio spine proof may be demo-seed/mixer-only; FluxRT visual lane remains procedural/CPU-only until GPU inference receipt exists."
     }
   }
 }
