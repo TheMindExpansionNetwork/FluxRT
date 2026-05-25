@@ -1,0 +1,22 @@
+{
+  "lane": "fluxrt",
+  "mode": "realtime_video_edit",
+  "prompt": "real emerald python made of living code, assistive HUD, cyberpunk stage visuals",
+  "negative_prompt": "blurry, dead snake, flat texture, static image, watermark",
+  "style_tokens": [
+    "real_snake",
+    "living_code",
+    "assistive_hud",
+    "cyberpunk_stage",
+    "emerald_bioluminescence"
+  ],
+  "control": {
+    "target_fps": 24,
+    "resolution": {
+      "width": 512,
+      "height": 512
+    },
+    "prompt_update_hz": 2
+  },
+  "claim_boundary": "Procedural preview and control packet only; not FluxRT model inference."
+}

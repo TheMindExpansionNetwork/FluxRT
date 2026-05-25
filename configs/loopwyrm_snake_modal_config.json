@@ -1,0 +1,41 @@
+{
+  "default_prompt": "turn the live stream into a real emerald python made of living code, scales reflecting terminal text, assistive HUD, cyberpunk stage lighting",
+  "default_steps": 2,
+  "default_seed": 4242,
+  "models_path": "/cache/fluxrt/FLUX.2-klein-4B",
+  "int8_models_path": "/cache/fluxrt/FLUX.2-klein-4B-int8",
+  "rife_models_path": "/cache/fluxrt/RIFE-safetensors",
+  "resolution": {
+    "height": 512,
+    "width": 512
+  },
+  "compile_models": true,
+  "enable_spatial_cache": true,
+  "enable_int8_quantization": true,
+  "target_fps": 24,
+  "interpolation_exp": 2,
+  "use_reference_image": true,
+  "logging": true,
+  "loopwyrm": {
+    "lane": "fluxrt",
+    "control_packet_topic": "loopwyrm.visual.fluxrt",
+    "style_tokens": [
+      "real_snake",
+      "living_code",
+      "assistive_hud",
+      "cyberpunk_stage",
+      "emerald_bioluminescence"
+    ],
+    "outputs": [
+      "modal_volume_preview",
+      "future_websocket_frames",
+      "future_virtual_camera_or_spout_on_operator_machine",
+      "future_resolume_clip_queue"
+    ],
+    "safety": {
+      "starts_live_show_control_by_default": false,
+      "downloads_weights_by_default": false,
+      "requires_human_approval_for_public_stream": true
+    }
+  }
+}

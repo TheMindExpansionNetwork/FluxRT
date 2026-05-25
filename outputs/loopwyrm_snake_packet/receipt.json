@@ -1,0 +1,12 @@
+{
+  "timestamp": "2026-05-25T00:32:51.072243+00:00",
+  "preview_mp4": "outputs/loopwyrm_snake_packet/loopwyrm_snake_packet_preview.mp4",
+  "packet_path": "outputs/loopwyrm_snake_packet/loopwyrm_snake_packet.json",
+  "ffprobe": {
+    "format": {
+      "duration": "2.000000",
+      "size": "268198"
+    }
+  },
+  "claim_boundary": "Procedural preview and control packet only; not FluxRT model inference."
+}
